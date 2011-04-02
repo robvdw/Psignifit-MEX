@@ -1,0 +1,79 @@
+From: robvdw <robvdw@mbfys.kun.nl>
+Date: February 13, 2011 12:53:43 AM GMT+01:00
+To: robvdw <robvdw@mbfys.kun.nl>
+Subject: Fwd: MATLAB MCR INSTALL / MBUILD -setup / configure Matlab compiler / Xcode developer  gcc 4.0 Mac OS X  / psignifit.c psignifit
+
+Make sure you replace in PSYGNIFIT.c 
+
+in for example 
+
+/Volumes/RESTORE_BACKUP/PARALLELS_9/RIPPLE_2009/MANUS_2009/DATA_ANALYSIS/RippleData/psignifit/psig-src
+if(index < 0.0 || index > (double)(nVals - 1.0)) return NAN;
+to:
+if(isnan(index) || index < 0.0 || index > (double)(nVals - 1.0)) return NAN;
+
+WHEN mex.h CANNOT BE FOUD DO the FOLLOWING
+
+copy  (without replacing!)
+
+dylib library files 
+from 
+/Applications/MATLAB/MATLAB_Compiler_Runtime/v714/bin/maci64/
+
+to (ACTUAL MATLAB PACKAGE):
+
+/Applications/MATLAB_R2010b.app/bin/maci64
+
+
+ALSO COPY all files from directories (include  AND lib) in 
+
+/Applications/MATLAB/MATLAB_Compiler_Runtime/v714/extern
+
+TO 
+
+/Applications/MATLAB_R2010b.app/extern
+
+
+
+
+Make sure to use a clean psygnifit DIRECTORY!
+Begin forwarded message:
+From: robvdw <robvdw@mbfys.kun.nl>
+Date: February 12, 2011 9:31:20 PM GMT+01:00
+To: robvdw <robvdw@mbfys.kun.nl>
+Subject: MATLAB MCR INSTALL / MBUILD -setup / configure Matlab compiler / Xcode developer gcc 4.0 Mac OS X 
+
+
+
+Begin forwarded message:
+From: robvdw <robvdw@mbfys.kun.nl>
+Date: February 12, 2011 9:08:54 PM GMT+01:00
+To: robvdw <robvdw@mbfys.kun.nl>
+Subject: MATLAB MCR INSTALL / MBUILD -setup / configure Matlab compiler
+
+
+
+Begin forwarded message:
+From: robvdw <robvdw@mbfys.kun.nl>
+Date: February 12, 2011 8:59:48 PM GMT+01:00
+To: robvdw <robvdw@mbfys.kun.nl>
+Subject: MATLAB MCR INSTALL
+
+/Applications/MATLAB_R2010b.app/toolbox/compiler/deploy/maci64/MCRInstaller.dmg
+
+
+look inside matlab.app packadge
+
+
+you also need gcc 4.0  (instal xcode Mac OS)
+
+
+Thank You From the Apple Developer Connection
+Dear Robert Frans van der Willigen,
+Thank you for joining the Apple Developer Connection. We're pleased that you have chosen to become part of the dynamic and diverse community creating innovative products and solutions using Apple technologies.
+Your ADC Member username is: robvdw. This is also your Apple ID and it may be used, along with your password, to log in to the ADC Member Site and to access many other Apple services.
+The Apple Developer Connection is here to support your success. Please visit our website to learn more about the benefits of ADC membership. If you have specific questions or if you would like to provide feedback on how we can better serve your needs, please contact us.
+We look forward to helping you make the most of the Apple platform.
+Your Apple Developer Connection team
+
+
